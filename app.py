@@ -7,7 +7,7 @@ app.secret_key = "secret123"
 
 GEMINI_API_KEY = "AIzaSyAdk5uE65eIu9tn-CklPOmkOgUlJbf6bAY"
 
-# ---------------- БД ----------------
+
 def init_db():
     conn = sqlite3.connect("tasks.db")
     cursor = conn.cursor()
@@ -37,7 +37,7 @@ def init_db():
 
 init_db()
 
-# ---------------- AUTH ----------------
+
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -98,7 +98,7 @@ def logout():
     session.pop("user", None)
     return redirect("/login")
 
-# ---------------- MAIN ----------------
+
 
 @app.route("/")
 def index():
@@ -106,7 +106,7 @@ def index():
         return redirect("/login")
     return render_template("index.html")
 
-# ---------------- API ----------------
+
 
 @app.route("/add_task", methods=["POST"])
 def add_task():
@@ -176,7 +176,7 @@ def toggle_complete(id):
     return jsonify({"status": "ok"})
 
 
-# ---------------- AI ----------------
+
 
 @app.route("/ai", methods=["POST"])
 def ai():
