@@ -231,7 +231,7 @@ button.task-btn:hover,
     word-break: break-word;
 }
 
-/* планшеты */
+
 @media (max-width: 1100px) {
     .main-container {
         flex-wrap: wrap;
@@ -256,7 +256,7 @@ button.task-btn:hover,
     }
 }
 
-/* телефоны */
+
 @media (max-width: 768px) {
     body {
         padding: 12px;
@@ -305,7 +305,7 @@ button.task-btn:hover,
     }
 }
 
-/* маленькие телефоны */
+
 @media (max-width: 480px) {
     h1 {
         font-size: 20px;
