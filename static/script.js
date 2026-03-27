@@ -6,13 +6,13 @@ const progressFill = document.getElementById("progress")
 
 const aiResultEl = document.getElementById("aiResult")
 
-// загрузка при открытии страницы
+
 window.onload = () => {
     loadTasks()
 }
 
 
-// ---------- ЗАГРУЗКА ЗАДАЧ ----------
+
 
 async function loadTasks(filter = "all") {
 
@@ -62,7 +62,7 @@ async function loadTasks(filter = "all") {
 
 
 
-// ---------- ДОБАВЛЕНИЕ ----------
+
 
 async function addTask() {
 
@@ -100,7 +100,7 @@ async function addTask() {
 
 
 
-// ---------- УДАЛЕНИЕ ----------
+
 
 async function deleteTask(id){
 
@@ -113,7 +113,7 @@ async function deleteTask(id){
 
 
 
-// ---------- ВЫПОЛНЕНО ----------
+
 
 async function toggleComplete(id, completed){
 
@@ -132,7 +132,7 @@ async function toggleComplete(id, completed){
 
 
 
-// ---------- СТАТИСТИКА ----------
+
 
 function updateStats(total, completed){
 
@@ -148,7 +148,7 @@ function updateStats(total, completed){
 
 
 
-// ---------- AI ----------
+
 
 async function askAI(){
     aiResultEl.innerText = "AI думает..."
@@ -164,13 +164,13 @@ async function askAI(){
 
 
 
-// ---------- ФИЛЬТР ----------
+
 
 function filterTasks(type){
     loadTasks(type)
 }
 
-// ---------- СОВЕТЫ ----------
+
 
 const tips = [
 "Разделите большую задачу на несколько маленьких.",
@@ -231,7 +231,7 @@ function newTip(){
 
     let random;
 
-    // чтобы совет не повторялся
+
     do{
         random = Math.floor(Math.random() * tips.length);
     } while(random === lastTipIndex);
@@ -240,14 +240,14 @@ function newTip(){
 
     const tipText = document.getElementById("tipText");
 
-    // плавное исчезновение
+   
     tipText.style.opacity = 0;
 
     setTimeout(() => {
 
         tipText.innerText = tips[random];
 
-        // плавное появление
+
         tipText.style.opacity = 1;
 
     }, 300);
