@@ -12,7 +12,7 @@ def init_db():
     conn = sqlite3.connect("tasks.db")
     cursor = conn.cursor()
 
-    # задачи
+    
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS tasks (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -23,7 +23,7 @@ def init_db():
     )
     """)
 
-    # пользователи
+    
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS users (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
